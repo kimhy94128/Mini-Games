@@ -1,0 +1,68 @@
+<body class="rps" onload="startGame()">
+  <div class="com">
+    <div class="img"></div>
+  </div>
+  <button id="scissors" class="btn">가위</button>
+  <button id="rock" class="btn">바위</button>
+  <button id="paper" class="btn">보</button>
+
+<script>
+const comImg = document.querySelector('.img');
+const btns = document.querySelectorAll('.btn');
+let rock = -10;
+let scissors = -210;
+let paper = -425
+let position;
+
+function comResult(x){
+  switch(x){
+    case -10 : return '바위'; break;
+    case -210 : return '가위'; break;
+    case -425 : return '보'; break;
+  }
+}
+
+let interval;
+
+function startGame(){
+  interval = setInterval(function(){
+  if(position === rock){
+    position = scissors;
+  } else if(position === scissors){
+    position = paper;
+  } else {
+    position = rock;
+  }
+  comImg.style.background = `url(images/rps.png) ${position}px -125px / cover `;
+},50)
+}
+
+btns.forEach(btn => {
+  btn.addEventListener('click', getResult)
+})
+
+function getResult(event){
+  const user = event.target.textContent;
+  const com = comResult(position)
+  clearInterval(interval);
+  setTimeout(startGame,1000);
+
+  if(user === com){
+    alert('무승부');
+  }
+
+  if(user === '가위' && com === '보' ||
+    user === '바위' && com === '가위' ||
+    user === '보' && com === '바위'){
+      alert('승리');
+    }
+
+  if(user === '보' && com === '가위' ||
+    user === '가위' && com === '바위' ||
+    user === '바위' && com === '보'){
+      alert('패배');
+    }
+}
+
+</script>
+</body>
