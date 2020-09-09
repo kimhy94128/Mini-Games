@@ -1,24 +1,4 @@
-<body>
-  <table style="border: 1px solid black">
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-
-  <script>
-  const rows = document.querySelectorAll('tr');
+const rows = document.querySelectorAll('tr');
   let cells = document.querySelectorAll('td');
   const board = [];
   let play = true;
@@ -88,5 +68,3 @@ function turn(){
     }
   }
 }
-</script>
-</body>
