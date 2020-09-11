@@ -16,8 +16,8 @@ let rightPressed = false;
 let leftPressed = false;
 
 // 벽돌 변수
-let brickRowCount = 4;
-let brickColumnCount = 5;
+let brickRowCount = 3;
+let brickColumnCount = 4;
 const brickWidth = 75;
 const brickHeight = 20;
 const brickPadding = 10;
@@ -40,6 +40,10 @@ let lives = 3;
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
+
+// 모바일
+document.addEventListener("touchstart", mouseMoveHandler, false);
+document.addEventListener("touchmove", mouseMoveHandler, false);
 
 function mouseMoveHandler(e){
   let relativeX = e.clientX - canvas.offsetLeft;
