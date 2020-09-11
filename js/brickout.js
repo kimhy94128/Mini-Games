@@ -43,7 +43,13 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 
 // 모바일
 document.addEventListener("touchstart", mouseMoveHandler, false);
-document.addEventListener("touchmove", mouseMoveHandler, false);
+document.addEventListener("touchmove", touchMoveHandler, false);
+
+function touchMoveHandler(e){
+  let relativeX = e.changedTouches[0].clientX - canvas.offsetLeft;
+  if(relativeX > 0 && relativeX < canvas.width){
+    paddleX = relativeX - paddleWidth/2;}
+}
 
 function mouseMoveHandler(e){
   let relativeX = e.clientX - canvas.offsetLeft;
