@@ -156,7 +156,7 @@ function draw(){
   if(y + dy < ballRadius){
     dy = -dy;
   } else if(y + dy > canvas.height-ballRadius){
-    if(x > paddleX && x < paddleX + paddleWidth){
+    if(x > paddleX && x < paddleX + paddleWidth){ //패들에 부딪힐 때
       dy = -dy;
     } else {
       lives--;
