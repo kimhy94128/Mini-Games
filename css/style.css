@@ -1,0 +1,30 @@
+/* 레이아웃 */
+header {
+
+}
+section {
+
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+h1 {
+  margin: 15px 0;
+  text-align: center;
+}
+h1 a {
+  color: #000;
+}
+
+li a {
+  margin: 10px auto;
+  width: 90%;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  color: #000;
+}
