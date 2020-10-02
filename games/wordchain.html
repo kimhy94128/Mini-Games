@@ -6,11 +6,30 @@
   <title>끝말잇기</title>
   <link rel="stylesheet" href="../css/reset.css">
   <style>
+    .word {
+      text-align: center;
+      padding: 15px;
+    }
+    .answer {
+      text-align: center;
+    }
+    input[type=text], button{
+      vertical-align: middle;
+      height: 30px;
+      font-size: 20px;
+      box-sizing: border-box;
+      
+    }
+    button {
+      padding: 0 10px;
+    }
   </style>
 </head>
 <body>
-  <div class="word">칸쵸</div>
-  <input type="text" name="answer" onkeypress="enter()"><button onclick="next()">확인</button>
+  <div class="word"><h1>칸쵸</h1></div>
+  <div class="answer">
+    <input type="text" name="answer" onkeypress="enter()"><button onclick="next()">확인</button>
+  </div>
 <script src="../js/wordchain.js"></script>
 </body>
 </html>
